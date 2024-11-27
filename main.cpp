@@ -141,7 +141,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
     // Create window with OpenGL context
-    GLFWwindow *window = glfwCreateWindow(800, 600, "ImGui + Triangle", NULL, NULL);
+    GLFWwindow *window = glfwCreateWindow(800, 800, "ImGui + Triangle", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
