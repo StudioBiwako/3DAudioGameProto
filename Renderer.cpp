@@ -1,3 +1,4 @@
+// Renderer.cpp
 #include "Renderer.hpp"
 #include <iostream>
 
@@ -6,16 +7,22 @@ Renderer::Renderer()
     vertexShaderSource = R"(
         #version 150 core
         in vec3 position;
+        uniform vec2 offset;
+        uniform float scale;
+        
         void main() {
-            gl_Position = vec4(position, 1.0);
+            vec3 scaled = position * scale;
+            gl_Position = vec4(scaled.x + offset.x, scaled.y + offset.y, scaled.z, 1.0);
         }
     )";
 
     fragmentShaderSource = R"(
         #version 150 core
+        uniform vec3 color;
         out vec4 fragColor;
+        
         void main() {
-            fragColor = vec4(1.0, 0.0, 0.0, 1.0);
+            fragColor = vec4(color, 1.0);
         }
     )";
 }
@@ -24,6 +31,7 @@ Renderer::~Renderer()
 {
     glDeleteProgram(shaderProgram);
     glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
 }
 
 GLuint Renderer::compileShader(GLenum type, const char *source)
@@ -65,16 +73,17 @@ void Renderer::setupTriangle()
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 
+    // Base triangle vertices (smaller default size)
     float vertices[] = {
-        -0.5f, -0.5f, 0.0f,
-        0.5f, -0.5f, 0.0f,
-        0.0f, 0.5f, 0.0f};
+        -0.1f, -0.1f, 0.0f, // Left
+        0.1f, -0.1f, 0.0f,  // Right
+        0.0f, 0.1f, 0.0f    // Top
+    };
 
     glGenVertexArrays(1, &VAO);
-    glBindVertexArray(VAO);
-
-    GLuint VBO;
     glGenBuffers(1, &VBO);
+
+    glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
@@ -83,9 +92,33 @@ void Renderer::setupTriangle()
     glEnableVertexAttribArray(posAttrib);
 }
 
+void Renderer::addTriangle(float x, float y, float r, float g, float b, float scale)
+{
+    Triangle t{x, y, r, g, b, scale};
+    triangles.push_back(t);
+}
+
+void Renderer::clearTriangles()
+{
+    triangles.clear();
+}
+
 void Renderer::render()
 {
     glUseProgram(shaderProgram);
     glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+
+    // Get uniform locations
+    GLint offsetLoc = glGetUniformLocation(shaderProgram, "offset");
+    GLint colorLoc = glGetUniformLocation(shaderProgram, "color");
+    GLint scaleLoc = glGetUniformLocation(shaderProgram, "scale");
+
+    // Render each triangle with its position and color
+    for (const auto &triangle : triangles)
+    {
+        glUniform2f(offsetLoc, triangle.x, triangle.y);
+        glUniform3f(colorLoc, triangle.r, triangle.g, triangle.b);
+        glUniform1f(scaleLoc, triangle.scale);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+    }
 }

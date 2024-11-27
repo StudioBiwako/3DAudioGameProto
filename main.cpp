@@ -9,25 +9,24 @@ int main()
 {
     try
     {
-        // Create window
-        Window window(800, 800, "ImGui + Triangle");
+        Window window(800, 800, "The Three Blind Archers");
 
-        // Create GUI and Renderer instances
         GUI gui(window.getWindow());
         Renderer renderer;
 
-        // Setup triangle
         renderer.setupTriangle();
+        renderer.addTriangle(0.0f, 0.0f);                          // Center triangle
+        renderer.addTriangle(0.5f, 0.5f);                          // Top right triangle
+        renderer.addTriangle(-0.5f, -0.5f, 0.0f, 1.0f, 0.0f);      // Bottom left green triangle
+        renderer.addTriangle(0.5f, -0.5f, 1.0f, 1.0f, 0.0f, 0.5f); // Bottom right yellow, half size
 
         while (!window.shouldClose())
         {
             window.pollEvents();
 
-            // GUI frame
             gui.newFrame();
             gui.setupUI();
 
-            // Rendering
             int display_w, display_h;
             window.getFramebufferSize(display_w, display_h);
             glViewport(0, 0, display_w, display_h);
