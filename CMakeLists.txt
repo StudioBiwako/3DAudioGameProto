@@ -16,7 +16,7 @@ include_directories(${CMAKE_SOURCE_DIR}/imgui)
 include_directories(${CMAKE_SOURCE_DIR}/imgui/backends)
 
 # Add executable
-add_executable(ImGuiExample main.cpp ${IMGUI_SOURCES})
+add_executable(ImGuiExample main.cpp GUI.cpp Renderer.cpp Window.cpp ${IMGUI_SOURCES})
 
 # Link libraries
 find_package(OpenGL REQUIRED)

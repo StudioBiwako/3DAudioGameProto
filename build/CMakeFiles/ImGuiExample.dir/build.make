@@ -86,10 +86,52 @@ CMakeFiles/ImGuiExample.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ImGuiExample.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tambat/imgui/project/main.cpp -o CMakeFiles/ImGuiExample.dir/main.cpp.s
 
+CMakeFiles/ImGuiExample.dir/GUI.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
+CMakeFiles/ImGuiExample.dir/GUI.cpp.o: /Users/tambat/imgui/project/GUI.cpp
+CMakeFiles/ImGuiExample.dir/GUI.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ImGuiExample.dir/GUI.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/GUI.cpp.o -MF CMakeFiles/ImGuiExample.dir/GUI.cpp.o.d -o CMakeFiles/ImGuiExample.dir/GUI.cpp.o -c /Users/tambat/imgui/project/GUI.cpp
+
+CMakeFiles/ImGuiExample.dir/GUI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ImGuiExample.dir/GUI.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tambat/imgui/project/GUI.cpp > CMakeFiles/ImGuiExample.dir/GUI.cpp.i
+
+CMakeFiles/ImGuiExample.dir/GUI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ImGuiExample.dir/GUI.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tambat/imgui/project/GUI.cpp -o CMakeFiles/ImGuiExample.dir/GUI.cpp.s
+
+CMakeFiles/ImGuiExample.dir/Renderer.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
+CMakeFiles/ImGuiExample.dir/Renderer.cpp.o: /Users/tambat/imgui/project/Renderer.cpp
+CMakeFiles/ImGuiExample.dir/Renderer.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ImGuiExample.dir/Renderer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/Renderer.cpp.o -MF CMakeFiles/ImGuiExample.dir/Renderer.cpp.o.d -o CMakeFiles/ImGuiExample.dir/Renderer.cpp.o -c /Users/tambat/imgui/project/Renderer.cpp
+
+CMakeFiles/ImGuiExample.dir/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ImGuiExample.dir/Renderer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tambat/imgui/project/Renderer.cpp > CMakeFiles/ImGuiExample.dir/Renderer.cpp.i
+
+CMakeFiles/ImGuiExample.dir/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ImGuiExample.dir/Renderer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tambat/imgui/project/Renderer.cpp -o CMakeFiles/ImGuiExample.dir/Renderer.cpp.s
+
+CMakeFiles/ImGuiExample.dir/Window.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
+CMakeFiles/ImGuiExample.dir/Window.cpp.o: /Users/tambat/imgui/project/Window.cpp
+CMakeFiles/ImGuiExample.dir/Window.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ImGuiExample.dir/Window.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/Window.cpp.o -MF CMakeFiles/ImGuiExample.dir/Window.cpp.o.d -o CMakeFiles/ImGuiExample.dir/Window.cpp.o -c /Users/tambat/imgui/project/Window.cpp
+
+CMakeFiles/ImGuiExample.dir/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ImGuiExample.dir/Window.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tambat/imgui/project/Window.cpp > CMakeFiles/ImGuiExample.dir/Window.cpp.i
+
+CMakeFiles/ImGuiExample.dir/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ImGuiExample.dir/Window.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tambat/imgui/project/Window.cpp -o CMakeFiles/ImGuiExample.dir/Window.cpp.s
+
 CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
 CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o: /Users/tambat/imgui/project/imgui/backends/imgui_impl_glfw.cpp
 CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o -c /Users/tambat/imgui/project/imgui/backends/imgui_impl_glfw.cpp
 
 CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
@@ -103,7 +145,7 @@ CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.s: cmake_force
 CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
 CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o: /Users/tambat/imgui/project/imgui/backends/imgui_impl_opengl3.cpp
 CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o -c /Users/tambat/imgui/project/imgui/backends/imgui_impl_opengl3.cpp
 
 CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
@@ -117,7 +159,7 @@ CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.s: cmake_force
 CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
 CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o: /Users/tambat/imgui/project/imgui/imgui.cpp
 CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o -MF CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o.d -o CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o -c /Users/tambat/imgui/project/imgui/imgui.cpp
 
 CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.i: cmake_force
@@ -131,7 +173,7 @@ CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.s: cmake_force
 CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
 CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o: /Users/tambat/imgui/project/imgui/imgui_demo.cpp
 CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o -MF CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o.d -o CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o -c /Users/tambat/imgui/project/imgui/imgui_demo.cpp
 
 CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.i: cmake_force
@@ -145,7 +187,7 @@ CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.s: cmake_force
 CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
 CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o: /Users/tambat/imgui/project/imgui/imgui_draw.cpp
 CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o -MF CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o.d -o CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o -c /Users/tambat/imgui/project/imgui/imgui_draw.cpp
 
 CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.i: cmake_force
@@ -159,7 +201,7 @@ CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.s: cmake_force
 CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
 CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o: /Users/tambat/imgui/project/imgui/imgui_tables.cpp
 CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o -MF CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o.d -o CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o -c /Users/tambat/imgui/project/imgui/imgui_tables.cpp
 
 CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.i: cmake_force
@@ -173,7 +215,7 @@ CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.s: cmake_force
 CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/ImGuiExample.dir/flags.make
 CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o: /Users/tambat/imgui/project/imgui/imgui_widgets.cpp
 CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/ImGuiExample.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o -MF CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o -c /Users/tambat/imgui/project/imgui/imgui_widgets.cpp
 
 CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.i: cmake_force
@@ -187,6 +229,9 @@ CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.s: cmake_force
 # Object files for target ImGuiExample
 ImGuiExample_OBJECTS = \
 "CMakeFiles/ImGuiExample.dir/main.cpp.o" \
+"CMakeFiles/ImGuiExample.dir/GUI.cpp.o" \
+"CMakeFiles/ImGuiExample.dir/Renderer.cpp.o" \
+"CMakeFiles/ImGuiExample.dir/Window.cpp.o" \
 "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o" \
 "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o" \
 "CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o" \
@@ -199,6 +244,9 @@ ImGuiExample_OBJECTS = \
 ImGuiExample_EXTERNAL_OBJECTS =
 
 ImGuiExample: CMakeFiles/ImGuiExample.dir/main.cpp.o
+ImGuiExample: CMakeFiles/ImGuiExample.dir/GUI.cpp.o
+ImGuiExample: CMakeFiles/ImGuiExample.dir/Renderer.cpp.o
+ImGuiExample: CMakeFiles/ImGuiExample.dir/Window.cpp.o
 ImGuiExample: CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o
 ImGuiExample: CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o
 ImGuiExample: CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o
@@ -210,7 +258,7 @@ ImGuiExample: CMakeFiles/ImGuiExample.dir/build.make
 ImGuiExample: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/OpenGL.framework
 ImGuiExample: /opt/homebrew/lib/libglfw.3.4.dylib
 ImGuiExample: CMakeFiles/ImGuiExample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ImGuiExample"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ImGuiExample"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ImGuiExample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -129,6 +129,78 @@ ImGuiExample/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/build
 .PHONY : ImGuiExample/fast
 
+GUI.o: GUI.cpp.o
+.PHONY : GUI.o
+
+# target to build an object file
+GUI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/GUI.cpp.o
+.PHONY : GUI.cpp.o
+
+GUI.i: GUI.cpp.i
+.PHONY : GUI.i
+
+# target to preprocess a source file
+GUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/GUI.cpp.i
+.PHONY : GUI.cpp.i
+
+GUI.s: GUI.cpp.s
+.PHONY : GUI.s
+
+# target to generate assembly for a file
+GUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/GUI.cpp.s
+.PHONY : GUI.cpp.s
+
+Renderer.o: Renderer.cpp.o
+.PHONY : Renderer.o
+
+# target to build an object file
+Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Renderer.cpp.o
+.PHONY : Renderer.cpp.o
+
+Renderer.i: Renderer.cpp.i
+.PHONY : Renderer.i
+
+# target to preprocess a source file
+Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Renderer.cpp.i
+.PHONY : Renderer.cpp.i
+
+Renderer.s: Renderer.cpp.s
+.PHONY : Renderer.s
+
+# target to generate assembly for a file
+Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Renderer.cpp.s
+.PHONY : Renderer.cpp.s
+
+Window.o: Window.cpp.o
+.PHONY : Window.o
+
+# target to build an object file
+Window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Window.cpp.o
+.PHONY : Window.cpp.o
+
+Window.i: Window.cpp.i
+.PHONY : Window.i
+
+# target to preprocess a source file
+Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Window.cpp.i
+.PHONY : Window.cpp.i
+
+Window.s: Window.cpp.s
+.PHONY : Window.s
+
+# target to generate assembly for a file
+Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Window.cpp.s
+.PHONY : Window.cpp.s
+
 imgui/backends/imgui_impl_glfw.o: imgui/backends/imgui_impl_glfw.cpp.o
 .PHONY : imgui/backends/imgui_impl_glfw.o
 
@@ -330,6 +402,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ImGuiExample"
+	@echo "... GUI.o"
+	@echo "... GUI.i"
+	@echo "... GUI.s"
+	@echo "... Renderer.o"
+	@echo "... Renderer.i"
+	@echo "... Renderer.s"
+	@echo "... Window.o"
+	@echo "... Window.i"
+	@echo "... Window.s"
 	@echo "... imgui/backends/imgui_impl_glfw.o"
 	@echo "... imgui/backends/imgui_impl_glfw.i"
 	@echo "... imgui/backends/imgui_impl_glfw.s"

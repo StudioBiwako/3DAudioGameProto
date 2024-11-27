@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ImGuiExample.dir/GUI.cpp.o"
+  "CMakeFiles/ImGuiExample.dir/GUI.cpp.o.d"
+  "CMakeFiles/ImGuiExample.dir/Renderer.cpp.o"
+  "CMakeFiles/ImGuiExample.dir/Renderer.cpp.o.d"
+  "CMakeFiles/ImGuiExample.dir/Window.cpp.o"
+  "CMakeFiles/ImGuiExample.dir/Window.cpp.o.d"
   "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o"
   "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o.d"
   "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o"

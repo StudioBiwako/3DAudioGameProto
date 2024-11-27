@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/tambat/imgui/project/GUI.cpp" "CMakeFiles/ImGuiExample.dir/GUI.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/GUI.cpp.o.d"
+  "/Users/tambat/imgui/project/Renderer.cpp" "CMakeFiles/ImGuiExample.dir/Renderer.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/Renderer.cpp.o.d"
+  "/Users/tambat/imgui/project/Window.cpp" "CMakeFiles/ImGuiExample.dir/Window.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/Window.cpp.o.d"
   "/Users/tambat/imgui/project/imgui/backends/imgui_impl_glfw.cpp" "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o.d"
   "/Users/tambat/imgui/project/imgui/backends/imgui_impl_opengl3.cpp" "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o.d"
   "/Users/tambat/imgui/project/imgui/imgui.cpp" "CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o.d"
