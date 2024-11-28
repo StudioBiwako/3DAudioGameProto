@@ -974,4 +974,7 @@ CMakeFiles/ImGuiExample.dir/main.cpp.o: \
   /Users/tambat/imgui/project/imgui/backends/imgui_impl_glfw.h \
   /Users/tambat/imgui/project/imgui/backends/imgui_impl_opengl3.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/TargetConditionals.h \
-  /Users/tambat/imgui/project/Renderer.hpp
+  /Users/tambat/imgui/project/Renderer.hpp \
+  /Users/tambat/imgui/project/AudioEngine.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/OpenAL.framework/Headers/al.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/OpenAL.framework/Headers/alc.h

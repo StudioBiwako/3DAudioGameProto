@@ -129,6 +129,30 @@ ImGuiExample/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/build
 .PHONY : ImGuiExample/fast
 
+AudioEngine.o: AudioEngine.cpp.o
+.PHONY : AudioEngine.o
+
+# target to build an object file
+AudioEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.o
+.PHONY : AudioEngine.cpp.o
+
+AudioEngine.i: AudioEngine.cpp.i
+.PHONY : AudioEngine.i
+
+# target to preprocess a source file
+AudioEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.i
+.PHONY : AudioEngine.cpp.i
+
+AudioEngine.s: AudioEngine.cpp.s
+.PHONY : AudioEngine.s
+
+# target to generate assembly for a file
+AudioEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.s
+.PHONY : AudioEngine.cpp.s
+
 GUI.o: GUI.cpp.o
 .PHONY : GUI.o
 
@@ -402,6 +426,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ImGuiExample"
+	@echo "... AudioEngine.o"
+	@echo "... AudioEngine.i"
+	@echo "... AudioEngine.s"
 	@echo "... GUI.o"
 	@echo "... GUI.i"
 	@echo "... GUI.s"

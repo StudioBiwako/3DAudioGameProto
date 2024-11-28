@@ -14,12 +14,14 @@ file(GLOB IMGUI_SOURCES
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR}/imgui)
 include_directories(${CMAKE_SOURCE_DIR}/imgui/backends)
+include_directories(${CMAKE_SOURCE_DIR}/dr_wav)
 
 # Add executable
-add_executable(ImGuiExample main.cpp GUI.cpp Renderer.cpp Window.cpp ${IMGUI_SOURCES})
+add_executable(ImGuiExample main.cpp GUI.cpp Renderer.cpp Window.cpp AudioEngine.cpp ${IMGUI_SOURCES})
 
 # Link libraries
+find_package(OpenAL REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 
-target_link_libraries(ImGuiExample OpenGL::GL glfw)
+target_link_libraries(ImGuiExample OpenAL::OpenAL OpenGL::GL glfw)

@@ -4,11 +4,33 @@
 #include "GUI.hpp"
 #include "Renderer.hpp"
 #include <iostream>
+#include "AudioEngine.hpp"
 
 int main()
 {
     try
     {
+
+        AudioEngine audio;
+
+        AudioEngine::printWorkingDirectory();
+
+        // Try to load the sound
+        if (!audio.loadSound("forest", "Audio/forest.wav"))
+        {
+            std::cerr << "Failed to load forest sound" << std::endl;
+            return 0;
+        }
+        // audio.loadSound("background", "Audio/forest.wav");
+        //  audio.loadSound("effect", "path/to/effect.wav");
+
+        audio.playSound("forest", true);
+
+        audio.setListenerPosition(0.0, 0.0, 0.0);
+
+        // audio.setSoundPosition("effect", 0.0, 0.0, 0.0);
+        // audio.playSound("effect");
+
         Window window(800, 800, "The Three Blind Archers");
 
         GUI gui(window.getWindow());

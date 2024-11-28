@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.o"
+  "CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.o.d"
   "CMakeFiles/ImGuiExample.dir/GUI.cpp.o"
   "CMakeFiles/ImGuiExample.dir/GUI.cpp.o.d"
   "CMakeFiles/ImGuiExample.dir/Renderer.cpp.o"

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/tambat/imgui/project/AudioEngine.cpp" "CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.o.d"
   "/Users/tambat/imgui/project/GUI.cpp" "CMakeFiles/ImGuiExample.dir/GUI.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/GUI.cpp.o.d"
   "/Users/tambat/imgui/project/Renderer.cpp" "CMakeFiles/ImGuiExample.dir/Renderer.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/Renderer.cpp.o.d"
   "/Users/tambat/imgui/project/Window.cpp" "CMakeFiles/ImGuiExample.dir/Window.cpp.o" "gcc" "CMakeFiles/ImGuiExample.dir/Window.cpp.o.d"
