@@ -19,8 +19,8 @@ public:
     ~AudioEngine();
     static void printWorkingDirectory();
     static bool checkFileExists(const std::string &filePath);
-
-    // Sound management
+    // bool AudioEngine::isSoundPlaying(const std::string &name);
+    //  Sound management
     bool loadSound(const std::string &name, const std::string &filePath);
     void playSound(const std::string &name, bool loop = false);
     void stopSound(const std::string &name);

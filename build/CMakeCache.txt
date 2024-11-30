@@ -14,6 +14,15 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+8.72_BINARY_DIR:STATIC=/Users/tambat/imgui/project/build
+
+//Value Computed by CMake
+8.72_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+8.72_SOURCE_DIR:STATIC=/Users/tambat/imgui/project
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -146,7 +155,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ImGuiExample
+CMAKE_PROJECT_NAME:STATIC=8.72
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib

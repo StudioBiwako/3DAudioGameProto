@@ -1,10 +1,10 @@
 #define GL_SILENCE_DEPRECATION
 
-#include "Window.hpp"
-#include "GUI.hpp"
-#include "Renderer.hpp"
+#include "components/Window/Window.hpp"
+#include "components/GUI/GUI.hpp"
+#include "components/Renderer/Renderer.hpp"
+#include "components/AudioEngine/AudioEngine.hpp"
 #include <iostream>
-#include "AudioEngine.hpp"
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
         // audio.setSoundPosition("effect", 0.0, 0.0, 0.0);
         // audio.playSound("effect");
 
-        Window window(800, 800, "The Three Blind Archers");
+        Window window(800, 800, "8.72");
 
         GUI gui(window.getWindow());
         Renderer renderer;

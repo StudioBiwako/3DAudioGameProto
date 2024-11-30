@@ -117,120 +117,120 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ImGuiExample
+# Target rules for targets named 8.72
 
 # Build rule for target.
-ImGuiExample: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ImGuiExample
-.PHONY : ImGuiExample
+8.72: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 8.72
+.PHONY : 8.72
 
 # fast build rule for target.
-ImGuiExample/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/build
-.PHONY : ImGuiExample/fast
+8.72/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/build
+.PHONY : 8.72/fast
 
-AudioEngine.o: AudioEngine.cpp.o
-.PHONY : AudioEngine.o
-
-# target to build an object file
-AudioEngine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.o
-.PHONY : AudioEngine.cpp.o
-
-AudioEngine.i: AudioEngine.cpp.i
-.PHONY : AudioEngine.i
-
-# target to preprocess a source file
-AudioEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.i
-.PHONY : AudioEngine.cpp.i
-
-AudioEngine.s: AudioEngine.cpp.s
-.PHONY : AudioEngine.s
-
-# target to generate assembly for a file
-AudioEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/AudioEngine.cpp.s
-.PHONY : AudioEngine.cpp.s
-
-GUI.o: GUI.cpp.o
-.PHONY : GUI.o
+components/AudioEngine/AudioEngine.o: components/AudioEngine/AudioEngine.cpp.o
+.PHONY : components/AudioEngine/AudioEngine.o
 
 # target to build an object file
-GUI.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/GUI.cpp.o
-.PHONY : GUI.cpp.o
+components/AudioEngine/AudioEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/AudioEngine/AudioEngine.cpp.o
+.PHONY : components/AudioEngine/AudioEngine.cpp.o
 
-GUI.i: GUI.cpp.i
-.PHONY : GUI.i
+components/AudioEngine/AudioEngine.i: components/AudioEngine/AudioEngine.cpp.i
+.PHONY : components/AudioEngine/AudioEngine.i
 
 # target to preprocess a source file
-GUI.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/GUI.cpp.i
-.PHONY : GUI.cpp.i
+components/AudioEngine/AudioEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/AudioEngine/AudioEngine.cpp.i
+.PHONY : components/AudioEngine/AudioEngine.cpp.i
 
-GUI.s: GUI.cpp.s
-.PHONY : GUI.s
+components/AudioEngine/AudioEngine.s: components/AudioEngine/AudioEngine.cpp.s
+.PHONY : components/AudioEngine/AudioEngine.s
 
 # target to generate assembly for a file
-GUI.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/GUI.cpp.s
-.PHONY : GUI.cpp.s
+components/AudioEngine/AudioEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/AudioEngine/AudioEngine.cpp.s
+.PHONY : components/AudioEngine/AudioEngine.cpp.s
 
-Renderer.o: Renderer.cpp.o
-.PHONY : Renderer.o
+components/GUI/GUI.o: components/GUI/GUI.cpp.o
+.PHONY : components/GUI/GUI.o
 
 # target to build an object file
-Renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Renderer.cpp.o
-.PHONY : Renderer.cpp.o
+components/GUI/GUI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/GUI/GUI.cpp.o
+.PHONY : components/GUI/GUI.cpp.o
 
-Renderer.i: Renderer.cpp.i
-.PHONY : Renderer.i
+components/GUI/GUI.i: components/GUI/GUI.cpp.i
+.PHONY : components/GUI/GUI.i
 
 # target to preprocess a source file
-Renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Renderer.cpp.i
-.PHONY : Renderer.cpp.i
+components/GUI/GUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/GUI/GUI.cpp.i
+.PHONY : components/GUI/GUI.cpp.i
 
-Renderer.s: Renderer.cpp.s
-.PHONY : Renderer.s
+components/GUI/GUI.s: components/GUI/GUI.cpp.s
+.PHONY : components/GUI/GUI.s
 
 # target to generate assembly for a file
-Renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Renderer.cpp.s
-.PHONY : Renderer.cpp.s
+components/GUI/GUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/GUI/GUI.cpp.s
+.PHONY : components/GUI/GUI.cpp.s
 
-Window.o: Window.cpp.o
-.PHONY : Window.o
+components/Renderer/Renderer.o: components/Renderer/Renderer.cpp.o
+.PHONY : components/Renderer/Renderer.o
 
 # target to build an object file
-Window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Window.cpp.o
-.PHONY : Window.cpp.o
+components/Renderer/Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/Renderer/Renderer.cpp.o
+.PHONY : components/Renderer/Renderer.cpp.o
 
-Window.i: Window.cpp.i
-.PHONY : Window.i
+components/Renderer/Renderer.i: components/Renderer/Renderer.cpp.i
+.PHONY : components/Renderer/Renderer.i
 
 # target to preprocess a source file
-Window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Window.cpp.i
-.PHONY : Window.cpp.i
+components/Renderer/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/Renderer/Renderer.cpp.i
+.PHONY : components/Renderer/Renderer.cpp.i
 
-Window.s: Window.cpp.s
-.PHONY : Window.s
+components/Renderer/Renderer.s: components/Renderer/Renderer.cpp.s
+.PHONY : components/Renderer/Renderer.s
 
 # target to generate assembly for a file
-Window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/Window.cpp.s
-.PHONY : Window.cpp.s
+components/Renderer/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/Renderer/Renderer.cpp.s
+.PHONY : components/Renderer/Renderer.cpp.s
+
+components/Window/Window.o: components/Window/Window.cpp.o
+.PHONY : components/Window/Window.o
+
+# target to build an object file
+components/Window/Window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/Window/Window.cpp.o
+.PHONY : components/Window/Window.cpp.o
+
+components/Window/Window.i: components/Window/Window.cpp.i
+.PHONY : components/Window/Window.i
+
+# target to preprocess a source file
+components/Window/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/Window/Window.cpp.i
+.PHONY : components/Window/Window.cpp.i
+
+components/Window/Window.s: components/Window/Window.cpp.s
+.PHONY : components/Window/Window.s
+
+# target to generate assembly for a file
+components/Window/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/components/Window/Window.cpp.s
+.PHONY : components/Window/Window.cpp.s
 
 imgui/backends/imgui_impl_glfw.o: imgui/backends/imgui_impl_glfw.cpp.o
 .PHONY : imgui/backends/imgui_impl_glfw.o
 
 # target to build an object file
 imgui/backends/imgui_impl_glfw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/backends/imgui_impl_glfw.cpp.o
 .PHONY : imgui/backends/imgui_impl_glfw.cpp.o
 
 imgui/backends/imgui_impl_glfw.i: imgui/backends/imgui_impl_glfw.cpp.i
@@ -238,7 +238,7 @@ imgui/backends/imgui_impl_glfw.i: imgui/backends/imgui_impl_glfw.cpp.i
 
 # target to preprocess a source file
 imgui/backends/imgui_impl_glfw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/backends/imgui_impl_glfw.cpp.i
 .PHONY : imgui/backends/imgui_impl_glfw.cpp.i
 
 imgui/backends/imgui_impl_glfw.s: imgui/backends/imgui_impl_glfw.cpp.s
@@ -246,7 +246,7 @@ imgui/backends/imgui_impl_glfw.s: imgui/backends/imgui_impl_glfw.cpp.s
 
 # target to generate assembly for a file
 imgui/backends/imgui_impl_glfw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_glfw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/backends/imgui_impl_glfw.cpp.s
 .PHONY : imgui/backends/imgui_impl_glfw.cpp.s
 
 imgui/backends/imgui_impl_opengl3.o: imgui/backends/imgui_impl_opengl3.cpp.o
@@ -254,7 +254,7 @@ imgui/backends/imgui_impl_opengl3.o: imgui/backends/imgui_impl_opengl3.cpp.o
 
 # target to build an object file
 imgui/backends/imgui_impl_opengl3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/backends/imgui_impl_opengl3.cpp.o
 .PHONY : imgui/backends/imgui_impl_opengl3.cpp.o
 
 imgui/backends/imgui_impl_opengl3.i: imgui/backends/imgui_impl_opengl3.cpp.i
@@ -262,7 +262,7 @@ imgui/backends/imgui_impl_opengl3.i: imgui/backends/imgui_impl_opengl3.cpp.i
 
 # target to preprocess a source file
 imgui/backends/imgui_impl_opengl3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/backends/imgui_impl_opengl3.cpp.i
 .PHONY : imgui/backends/imgui_impl_opengl3.cpp.i
 
 imgui/backends/imgui_impl_opengl3.s: imgui/backends/imgui_impl_opengl3.cpp.s
@@ -270,7 +270,7 @@ imgui/backends/imgui_impl_opengl3.s: imgui/backends/imgui_impl_opengl3.cpp.s
 
 # target to generate assembly for a file
 imgui/backends/imgui_impl_opengl3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/backends/imgui_impl_opengl3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/backends/imgui_impl_opengl3.cpp.s
 .PHONY : imgui/backends/imgui_impl_opengl3.cpp.s
 
 imgui/imgui.o: imgui/imgui.cpp.o
@@ -278,7 +278,7 @@ imgui/imgui.o: imgui/imgui.cpp.o
 
 # target to build an object file
 imgui/imgui.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui.cpp.o
 .PHONY : imgui/imgui.cpp.o
 
 imgui/imgui.i: imgui/imgui.cpp.i
@@ -286,7 +286,7 @@ imgui/imgui.i: imgui/imgui.cpp.i
 
 # target to preprocess a source file
 imgui/imgui.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui.cpp.i
 .PHONY : imgui/imgui.cpp.i
 
 imgui/imgui.s: imgui/imgui.cpp.s
@@ -294,7 +294,7 @@ imgui/imgui.s: imgui/imgui.cpp.s
 
 # target to generate assembly for a file
 imgui/imgui.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui.cpp.s
 .PHONY : imgui/imgui.cpp.s
 
 imgui/imgui_demo.o: imgui/imgui_demo.cpp.o
@@ -302,7 +302,7 @@ imgui/imgui_demo.o: imgui/imgui_demo.cpp.o
 
 # target to build an object file
 imgui/imgui_demo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_demo.cpp.o
 .PHONY : imgui/imgui_demo.cpp.o
 
 imgui/imgui_demo.i: imgui/imgui_demo.cpp.i
@@ -310,7 +310,7 @@ imgui/imgui_demo.i: imgui/imgui_demo.cpp.i
 
 # target to preprocess a source file
 imgui/imgui_demo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_demo.cpp.i
 .PHONY : imgui/imgui_demo.cpp.i
 
 imgui/imgui_demo.s: imgui/imgui_demo.cpp.s
@@ -318,7 +318,7 @@ imgui/imgui_demo.s: imgui/imgui_demo.cpp.s
 
 # target to generate assembly for a file
 imgui/imgui_demo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_demo.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_demo.cpp.s
 .PHONY : imgui/imgui_demo.cpp.s
 
 imgui/imgui_draw.o: imgui/imgui_draw.cpp.o
@@ -326,7 +326,7 @@ imgui/imgui_draw.o: imgui/imgui_draw.cpp.o
 
 # target to build an object file
 imgui/imgui_draw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_draw.cpp.o
 .PHONY : imgui/imgui_draw.cpp.o
 
 imgui/imgui_draw.i: imgui/imgui_draw.cpp.i
@@ -334,7 +334,7 @@ imgui/imgui_draw.i: imgui/imgui_draw.cpp.i
 
 # target to preprocess a source file
 imgui/imgui_draw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_draw.cpp.i
 .PHONY : imgui/imgui_draw.cpp.i
 
 imgui/imgui_draw.s: imgui/imgui_draw.cpp.s
@@ -342,7 +342,7 @@ imgui/imgui_draw.s: imgui/imgui_draw.cpp.s
 
 # target to generate assembly for a file
 imgui/imgui_draw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_draw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_draw.cpp.s
 .PHONY : imgui/imgui_draw.cpp.s
 
 imgui/imgui_tables.o: imgui/imgui_tables.cpp.o
@@ -350,7 +350,7 @@ imgui/imgui_tables.o: imgui/imgui_tables.cpp.o
 
 # target to build an object file
 imgui/imgui_tables.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_tables.cpp.o
 .PHONY : imgui/imgui_tables.cpp.o
 
 imgui/imgui_tables.i: imgui/imgui_tables.cpp.i
@@ -358,7 +358,7 @@ imgui/imgui_tables.i: imgui/imgui_tables.cpp.i
 
 # target to preprocess a source file
 imgui/imgui_tables.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_tables.cpp.i
 .PHONY : imgui/imgui_tables.cpp.i
 
 imgui/imgui_tables.s: imgui/imgui_tables.cpp.s
@@ -366,7 +366,7 @@ imgui/imgui_tables.s: imgui/imgui_tables.cpp.s
 
 # target to generate assembly for a file
 imgui/imgui_tables.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_tables.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_tables.cpp.s
 .PHONY : imgui/imgui_tables.cpp.s
 
 imgui/imgui_widgets.o: imgui/imgui_widgets.cpp.o
@@ -374,7 +374,7 @@ imgui/imgui_widgets.o: imgui/imgui_widgets.cpp.o
 
 # target to build an object file
 imgui/imgui_widgets.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_widgets.cpp.o
 .PHONY : imgui/imgui_widgets.cpp.o
 
 imgui/imgui_widgets.i: imgui/imgui_widgets.cpp.i
@@ -382,7 +382,7 @@ imgui/imgui_widgets.i: imgui/imgui_widgets.cpp.i
 
 # target to preprocess a source file
 imgui/imgui_widgets.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_widgets.cpp.i
 .PHONY : imgui/imgui_widgets.cpp.i
 
 imgui/imgui_widgets.s: imgui/imgui_widgets.cpp.s
@@ -390,7 +390,7 @@ imgui/imgui_widgets.s: imgui/imgui_widgets.cpp.s
 
 # target to generate assembly for a file
 imgui/imgui_widgets.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/imgui/imgui_widgets.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/imgui/imgui_widgets.cpp.s
 .PHONY : imgui/imgui_widgets.cpp.s
 
 main.o: main.cpp.o
@@ -398,7 +398,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -406,7 +406,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -414,7 +414,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -425,19 +425,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ImGuiExample"
-	@echo "... AudioEngine.o"
-	@echo "... AudioEngine.i"
-	@echo "... AudioEngine.s"
-	@echo "... GUI.o"
-	@echo "... GUI.i"
-	@echo "... GUI.s"
-	@echo "... Renderer.o"
-	@echo "... Renderer.i"
-	@echo "... Renderer.s"
-	@echo "... Window.o"
-	@echo "... Window.i"
-	@echo "... Window.s"
+	@echo "... 8.72"
+	@echo "... components/AudioEngine/AudioEngine.o"
+	@echo "... components/AudioEngine/AudioEngine.i"
+	@echo "... components/AudioEngine/AudioEngine.s"
+	@echo "... components/GUI/GUI.o"
+	@echo "... components/GUI/GUI.i"
+	@echo "... components/GUI/GUI.s"
+	@echo "... components/Renderer/Renderer.o"
+	@echo "... components/Renderer/Renderer.i"
+	@echo "... components/Renderer/Renderer.s"
+	@echo "... components/Window/Window.o"
+	@echo "... components/Window/Window.i"
+	@echo "... components/Window/Window.s"
 	@echo "... imgui/backends/imgui_impl_glfw.o"
 	@echo "... imgui/backends/imgui_impl_glfw.i"
 	@echo "... imgui/backends/imgui_impl_glfw.s"

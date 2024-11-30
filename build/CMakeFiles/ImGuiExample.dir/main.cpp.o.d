@@ -1,6 +1,6 @@
 CMakeFiles/ImGuiExample.dir/main.cpp.o: \
   /Users/tambat/imgui/project/main.cpp \
-  /Users/tambat/imgui/project/Window.hpp \
+  /Users/tambat/imgui/project/components/Window/Window.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl3.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gltypes.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/stdint.h \
@@ -962,7 +962,7 @@ CMakeFiles/ImGuiExample.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/unistd.h \
-  /Users/tambat/imgui/project/GUI.hpp \
+  /Users/tambat/imgui/project/components/GUI/GUI.hpp \
   /Users/tambat/imgui/project/imgui/imgui.h \
   /Users/tambat/imgui/project/imgui/imconfig.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/float.h \
@@ -974,7 +974,7 @@ CMakeFiles/ImGuiExample.dir/main.cpp.o: \
   /Users/tambat/imgui/project/imgui/backends/imgui_impl_glfw.h \
   /Users/tambat/imgui/project/imgui/backends/imgui_impl_opengl3.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/TargetConditionals.h \
-  /Users/tambat/imgui/project/Renderer.hpp \
-  /Users/tambat/imgui/project/AudioEngine.hpp \
+  /Users/tambat/imgui/project/components/Renderer/Renderer.hpp \
+  /Users/tambat/imgui/project/components/AudioEngine/AudioEngine.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/OpenAL.framework/Headers/al.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/OpenAL.framework/Headers/alc.h

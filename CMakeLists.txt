@@ -1,27 +1,30 @@
 cmake_minimum_required(VERSION 3.0)
-project(ImGuiExample)
+project(8.72)
 
-# Specify C++ standard
 set(CMAKE_CXX_STANDARD 17)
 
-# Add source files
 file(GLOB IMGUI_SOURCES
     ${CMAKE_SOURCE_DIR}/imgui/*.cpp
     ${CMAKE_SOURCE_DIR}/imgui/backends/imgui_impl_glfw.cpp
     ${CMAKE_SOURCE_DIR}/imgui/backends/imgui_impl_opengl3.cpp
 )
 
-# Include directories
+file(GLOB COMPONENT_SOURCES
+    ${CMAKE_SOURCE_DIR}/components/GUI/*.cpp
+    ${CMAKE_SOURCE_DIR}/components/Renderer/*.cpp
+    ${CMAKE_SOURCE_DIR}/components/Window/*.cpp
+    ${CMAKE_SOURCE_DIR}/components/AudioEngine/*.cpp
+)
+
 include_directories(${CMAKE_SOURCE_DIR}/imgui)
 include_directories(${CMAKE_SOURCE_DIR}/imgui/backends)
 include_directories(${CMAKE_SOURCE_DIR}/dr_wav)
+include_directories(${CMAKE_SOURCE_DIR}/components)
 
-# Add executable
-add_executable(ImGuiExample main.cpp GUI.cpp Renderer.cpp Window.cpp AudioEngine.cpp ${IMGUI_SOURCES})
+add_executable(8.72 main.cpp ${COMPONENT_SOURCES} ${IMGUI_SOURCES})
 
-# Link libraries
 find_package(OpenAL REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 
-target_link_libraries(ImGuiExample OpenAL::OpenAL OpenGL::GL glfw)
+target_link_libraries(8.72 OpenAL::OpenAL OpenGL::GL glfw)

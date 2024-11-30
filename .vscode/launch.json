@@ -5,7 +5,7 @@
       "name": "Build and Debug",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/ImGuiExample", // Path to your binary
+      "program": "${workspaceFolder}/build/8.72", // Path to your binary
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",

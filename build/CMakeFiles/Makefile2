@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/tambat/imgui/project/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ImGuiExample.dir/all
+all: CMakeFiles/8.72.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/ImGuiExample.dir/codegen
+codegen: CMakeFiles/8.72.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,39 +75,39 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ImGuiExample.dir/clean
+clean: CMakeFiles/8.72.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ImGuiExample.dir
+# Target rules for target CMakeFiles/8.72.dir
 
 # All Build rule for target.
-CMakeFiles/ImGuiExample.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target ImGuiExample"
-.PHONY : CMakeFiles/ImGuiExample.dir/all
+CMakeFiles/8.72.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tambat/imgui/project/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target 8.72"
+.PHONY : CMakeFiles/8.72.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ImGuiExample.dir/rule: cmake_check_build_system
+CMakeFiles/8.72.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tambat/imgui/project/build/CMakeFiles 13
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ImGuiExample.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/8.72.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tambat/imgui/project/build/CMakeFiles 0
-.PHONY : CMakeFiles/ImGuiExample.dir/rule
+.PHONY : CMakeFiles/8.72.dir/rule
 
 # Convenience name for target.
-ImGuiExample: CMakeFiles/ImGuiExample.dir/rule
-.PHONY : ImGuiExample
+8.72: CMakeFiles/8.72.dir/rule
+.PHONY : 8.72
 
 # codegen rule for target.
-CMakeFiles/ImGuiExample.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/codegen
-.PHONY : CMakeFiles/ImGuiExample.dir/codegen
+CMakeFiles/8.72.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/codegen
+.PHONY : CMakeFiles/8.72.dir/codegen
 
 # clean rule for target.
-CMakeFiles/ImGuiExample.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiExample.dir/build.make CMakeFiles/ImGuiExample.dir/clean
-.PHONY : CMakeFiles/ImGuiExample.dir/clean
+CMakeFiles/8.72.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/8.72.dir/build.make CMakeFiles/8.72.dir/clean
+.PHONY : CMakeFiles/8.72.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
