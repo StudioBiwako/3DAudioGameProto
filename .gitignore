@@ -4,6 +4,9 @@ out/
 debug/
 release/
 
+# repos u should be installing
+imgui/
+
 # CMake generated files
 CMakeCache.txt
 CMakeFiles/

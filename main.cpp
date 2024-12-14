@@ -16,7 +16,7 @@ int main()
         AudioEngine::printWorkingDirectory();
 
         // Try to load the sound
-        if (!audio.loadSound("forest", "Audio/forest.wav"))
+        if (!audio.loadSound("forest", "../Audio/forest.wav"))
         {
             std::cerr << "Failed to load forest sound" << std::endl;
             return 0;
