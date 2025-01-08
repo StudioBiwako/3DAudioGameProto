@@ -1,7 +1,14 @@
+/**
+ * Audio Engine for entire game
+ * reference: https://www.openal.org/documentation/OpenAL_Programmers_Guide.pdf
+ * for buffer properties
+ */
 #include "AudioEngine.hpp"
 #include <iostream>
+#include <filesystem>
 #define DR_WAV_IMPLEMENTATION
 #include "dr_wav.h"
+
 
 AudioEngine::AudioEngine()
 {
@@ -26,9 +33,11 @@ AudioEngine::AudioEngine()
         throw std::runtime_error("Failed to make OpenAL context current");
     }
 
-    // Initialize listener at origin
+    /*Initialize listeners, this should theoretically
+    be the main character's position on the map */
+
     alListener3f(AL_POSITION, 0.0f, 0.0f, 0.0f);
-    float orientation[] = {0.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f};
+    float orientation[6] = {0.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f};
     alListenerfv(AL_ORIENTATION, orientation);
 }
 
@@ -57,6 +66,10 @@ void AudioEngine::cleanup()
     {
         alcCloseDevice(device);
     }
+}
+
+std::unordered_map<std::string, SoundSource>& AudioEngine::getSounds() {
+    return sounds;
 }
 
 bool AudioEngine::loadSound(const std::string &name, const std::string &filePath)
@@ -105,30 +118,31 @@ bool AudioEngine::loadSound(const std::string &name, const std::string &filePath
     alSourcei(sound.source, AL_BUFFER, sound.buffer);
 
     sound.isPlaying = false;
-    sounds[name] = sound;
+    //place sound in unordered map
+    this -> getSounds()[name] = sound;
 
     drwav_uninit(&wav);
     return checkALError("loadSound");
 }
 
-// Add this helper method to check source state
-// bool AudioEngine::isSoundPlaying(const std::string &name)
-// {
-//     auto it = sounds.find(name);
-//     if (it != sounds.end())
-//     {
-//         ALint state;
-//         alGetSourcei(it->second.source, AL_SOURCE_STATE, &state);
-//         return state == AL_PLAYING;
-//     }
-//     return false;
-// }
+ bool AudioEngine::isSoundPlaying(const std::string &name)
+ {
+     auto it = sounds.find(name);
+     if (it != sounds.end())
+     {
+         ALint state;
+         alGetSourcei(it->second.source, AL_SOURCE_STATE, &state);
+         return state == AL_PLAYING;
+     }
+     return false;
+ }
 
 void AudioEngine::playSound(const std::string &name, bool loop)
 {
     auto it = sounds.find(name);
     if (it != sounds.end())
     {
+        //AL_LOOPING i, iv turns looping on (AL_TRUE) or off (AL_FALSE)
         alSourcei(it->second.source, AL_LOOPING, loop ? AL_TRUE : AL_FALSE);
         alSourcePlay(it->second.source);
         it->second.isPlaying = true;
@@ -195,18 +209,24 @@ bool AudioEngine::checkALError(const std::string &operation)
     return true;
 }
 
-#include <filesystem>
-namespace fs = std::filesystem;
-
-void AudioEngine::printWorkingDirectory()
-{
-    std::cout << "Current working directory: " << fs::current_path() << std::endl;
-}
-
 bool AudioEngine::checkFileExists(const std::string &filePath)
 {
-    bool exists = fs::exists(filePath);
-    std::cout << "Checking path: " << fs::absolute(filePath) << std::endl;
+    bool exists = std::filesystem::exists(filePath);
+    std::cout << "Checking path: " << std::filesystem::absolute(filePath) << std::endl;
     std::cout << "File " << (exists ? "exists" : "does not exist") << std::endl;
     return exists;
+}
+
+void AudioEngine::printSoundNames() const {
+    std::cout << "Currently loaded sounds:" << std::endl;
+    if (sounds.empty()) {
+        std::cout << "  No sounds loaded" << std::endl;
+        return;
+    }
+
+    for (const auto& [name, sound] : sounds) {
+        std::cout << "  - " << name
+                  << (sound.isPlaying ? " (playing)" : " (stopped)")
+                  << std::endl;
+    }
 }

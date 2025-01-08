@@ -21,7 +21,9 @@ include_directories(${CMAKE_SOURCE_DIR}/imgui/backends)
 include_directories(${CMAKE_SOURCE_DIR}/dr_wav)
 include_directories(${CMAKE_SOURCE_DIR}/components)
 
-add_executable(8.72 main.cpp ${COMPONENT_SOURCES} ${IMGUI_SOURCES})
+add_executable(8.72 main.cpp ${COMPONENT_SOURCES} ${IMGUI_SOURCES}
+        components/Archer/Archer.cpp
+        components/Archer/Archer.h)
 
 find_package(OpenAL REQUIRED)
 find_package(OpenGL REQUIRED)

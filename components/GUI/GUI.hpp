@@ -1,3 +1,4 @@
+// GUI.hpp
 #pragma once
 
 #include "imgui.h"
@@ -5,10 +6,9 @@
 #include "backends/imgui_impl_opengl3.h"
 #include <GLFW/glfw3.h>
 
-class GUI
-{
+class GUI {
 public:
-    GUI(GLFWwindow *window);
+    GUI(GLFWwindow* window);
     ~GUI();
 
     void newFrame();
@@ -16,9 +16,12 @@ public:
     void setupUI();
 
 private:
-    GLFWwindow *window;
+    GLFWwindow* window;
+    ImGuiContext* context;
     float sliderValue;
     int counter;
+    int damage;
+    int hp;
     char inputText[128];
     bool checkbox;
 };

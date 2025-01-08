@@ -1,0 +1,14 @@
+# ninja log v5
+42	135	1736377276924958608	CMakeFiles/8.72.dir/components/GUI/GUI.cpp.o	dd33757979650a75
+2	133	1736368662704846032	CMakeFiles/8.72.dir/imgui/backends/imgui_impl_opengl3.cpp.o	75265461669239fe
+133	596	1736368663165144993	CMakeFiles/8.72.dir/imgui/imgui_draw.cpp.o	74e0f6ca71aaf7bb
+2	504	1736368663073086076	CMakeFiles/8.72.dir/imgui/backends/imgui_impl_glfw.cpp.o	c276fad35243e4f7
+30	750	1736377178847031692	CMakeFiles/8.72.dir/main.cpp.o	718899cdb9f21523
+1	643	1736368663213986692	CMakeFiles/8.72.dir/components/Renderer/Renderer.cpp.o	29cab3a2b3463ba8
+32	782	1736375300794633405	CMakeFiles/8.72.dir/components/AudioEngine/AudioEngine.cpp.o	1817562a39a0a117
+2	823	1736368663393628049	CMakeFiles/8.72.dir/imgui/imgui.cpp.o	20b3c9462d680ccc
+112	614	1736368663185442617	CMakeFiles/8.72.dir/imgui/imgui_demo.cpp.o	cac8e27be4e3a317
+595	1143	1736368663714853401	CMakeFiles/8.72.dir/imgui/imgui_widgets.cpp.o	bcc6113723881ec9
+1	593	1736368663159577762	CMakeFiles/8.72.dir/components/Window/Window.cpp.o	3916fef785a71de0
+507	772	1736368663344287390	CMakeFiles/8.72.dir/imgui/imgui_tables.cpp.o	fed9325ad2518ba2
+135	195	1736377276983721116	8.72	3c913a6c82610a61
