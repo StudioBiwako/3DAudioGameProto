@@ -4,3 +4,12 @@
  */
 
 #include "Archer.h"
+
+void Archer::setIsFiring()
+{
+
+}
+void Archer::setIsDrawingBack()
+{
+
+}

@@ -14,11 +14,11 @@ private:
     int health = 10;
     int damageReceived = 0;
     bool isFiring = false;
-    bool isDrawingBack();
+    bool isDrawingBack = false;
     /*
      * everything needs to be moved to these archers, each archer should be the
      * parent class of an imgui, window, and renderer component...and honestly should play
-     * it's own audio files
+     * its own audio files
      * */
 public:
     void setIsFiring();

@@ -9,7 +9,6 @@
 #define DR_WAV_IMPLEMENTATION
 #include "dr_wav.h"
 
-
 AudioEngine::AudioEngine()
 {
     // Initialize OpenAL
@@ -35,10 +34,13 @@ AudioEngine::AudioEngine()
 
     /*Initialize listeners, this should theoretically
     be the main character's position on the map */
-
     alListener3f(AL_POSITION, 0.0f, 0.0f, 0.0f);
     float orientation[6] = {0.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f};
     alListenerfv(AL_ORIENTATION, orientation);
+
+    // Set up distance model for spatial audio
+    alDistanceModel(AL_INVERSE_DISTANCE_CLAMPED);
+    alListenerf(AL_GAIN, 1.0f);  // Global gain/volume
 }
 
 AudioEngine::~AudioEngine()
@@ -117,25 +119,29 @@ bool AudioEngine::loadSound(const std::string &name, const std::string &filePath
     alSourcef(sound.source, AL_GAIN, 1.0f);
     alSourcei(sound.source, AL_BUFFER, sound.buffer);
 
+    // Set distance attenuation properties
+    alSourcef(sound.source, AL_REFERENCE_DISTANCE, 1.0f);   // Distance where sound begins to attenuate
+    alSourcef(sound.source, AL_MAX_DISTANCE, 1000.0f);      // Distance where attenuation stops
+    alSourcef(sound.source, AL_ROLLOFF_FACTOR, 1.0f);       // How quickly sound attenuates
+
     sound.isPlaying = false;
-    //place sound in unordered map
-    this -> getSounds()[name] = sound;
+    this->getSounds()[name] = sound;
 
     drwav_uninit(&wav);
     return checkALError("loadSound");
 }
 
- bool AudioEngine::isSoundPlaying(const std::string &name)
- {
-     auto it = sounds.find(name);
-     if (it != sounds.end())
-     {
-         ALint state;
-         alGetSourcei(it->second.source, AL_SOURCE_STATE, &state);
-         return state == AL_PLAYING;
-     }
-     return false;
- }
+bool AudioEngine::isSoundPlaying(const std::string &name)
+{
+    auto it = sounds.find(name);
+    if (it != sounds.end())
+    {
+        ALint state;
+        alGetSourcei(it->second.source, AL_SOURCE_STATE, &state);
+        return state == AL_PLAYING;
+    }
+    return false;
+}
 
 void AudioEngine::playSound(const std::string &name, bool loop)
 {
