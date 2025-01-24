@@ -140,6 +140,13 @@ build CMakeFiles/8.72.dir/components/Archer/Archer.cpp.o: CXX_COMPILER__8.2e72_u
   OBJECT_DIR = CMakeFiles/8.72.dir
   OBJECT_FILE_DIR = CMakeFiles/8.72.dir/components/Archer
 
+build CMakeFiles/8.72.dir/components/Player/Player.cpp.o: CXX_COMPILER__8.2e72_unscanned_Debug /Users/tambat/imgui/project/components/Player/Player.cpp || cmake_object_order_depends_target_8.72
+  DEP_FILE = CMakeFiles/8.72.dir/components/Player/Player.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
+  INCLUDES = -I/Users/tambat/imgui/project/imgui -I/Users/tambat/imgui/project/imgui/backends -I/Users/tambat/imgui/project/dr_wav -I/Users/tambat/imgui/project/components -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenAL.framework/Headers -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/8.72.dir
+  OBJECT_FILE_DIR = CMakeFiles/8.72.dir/components/Player
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target 8.72
@@ -148,7 +155,7 @@ build CMakeFiles/8.72.dir/components/Archer/Archer.cpp.o: CXX_COMPILER__8.2e72_u
 #############################################
 # Link the executable 8.72
 
-build 8.72: CXX_EXECUTABLE_LINKER__8.2e72_Debug CMakeFiles/8.72.dir/main.cpp.o CMakeFiles/8.72.dir/components/AudioEngine/AudioEngine.cpp.o CMakeFiles/8.72.dir/components/GUI/GUI.cpp.o CMakeFiles/8.72.dir/components/Renderer/Renderer.cpp.o CMakeFiles/8.72.dir/components/Window/Window.cpp.o CMakeFiles/8.72.dir/imgui/backends/imgui_impl_glfw.cpp.o CMakeFiles/8.72.dir/imgui/backends/imgui_impl_opengl3.cpp.o CMakeFiles/8.72.dir/imgui/imgui.cpp.o CMakeFiles/8.72.dir/imgui/imgui_demo.cpp.o CMakeFiles/8.72.dir/imgui/imgui_draw.cpp.o CMakeFiles/8.72.dir/imgui/imgui_tables.cpp.o CMakeFiles/8.72.dir/imgui/imgui_widgets.cpp.o CMakeFiles/8.72.dir/components/Archer/Archer.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd /opt/homebrew/lib/libglfw.3.4.dylib
+build 8.72: CXX_EXECUTABLE_LINKER__8.2e72_Debug CMakeFiles/8.72.dir/main.cpp.o CMakeFiles/8.72.dir/components/AudioEngine/AudioEngine.cpp.o CMakeFiles/8.72.dir/components/GUI/GUI.cpp.o CMakeFiles/8.72.dir/components/Renderer/Renderer.cpp.o CMakeFiles/8.72.dir/components/Window/Window.cpp.o CMakeFiles/8.72.dir/imgui/backends/imgui_impl_glfw.cpp.o CMakeFiles/8.72.dir/imgui/backends/imgui_impl_opengl3.cpp.o CMakeFiles/8.72.dir/imgui/imgui.cpp.o CMakeFiles/8.72.dir/imgui/imgui_demo.cpp.o CMakeFiles/8.72.dir/imgui/imgui_draw.cpp.o CMakeFiles/8.72.dir/imgui/imgui_tables.cpp.o CMakeFiles/8.72.dir/imgui/imgui_widgets.cpp.o CMakeFiles/8.72.dir/components/Archer/Archer.cpp.o CMakeFiles/8.72.dir/components/Player/Player.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd /opt/homebrew/lib/libglfw.3.4.dylib
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd  /opt/homebrew/lib/libglfw.3.4.dylib  -Xlinker -framework -Xlinker OpenAL
   OBJECT_DIR = CMakeFiles/8.72.dir

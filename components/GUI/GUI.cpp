@@ -2,17 +2,14 @@
 #include "GUI.hpp"
 
 GUI::GUI(GLFWwindow* window) : window(window), sliderValue(0.0f), counter(0), checkbox(false), damage(0),hp(5){
-    // Initialize ImGui
     IMGUI_CHECKVERSION();
     context = ImGui::CreateContext();
     ImGui::SetCurrentContext(context);
     ImGuiIO& io = ImGui::GetIO();
 
-    // Setup ImGui backends
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 150");
 
-    // Clear input text buffer
     inputText[0] = '\0';
 }
 

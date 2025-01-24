@@ -23,7 +23,11 @@ include_directories(${CMAKE_SOURCE_DIR}/components)
 
 add_executable(8.72 main.cpp ${COMPONENT_SOURCES} ${IMGUI_SOURCES}
         components/Archer/Archer.cpp
-        components/Archer/Archer.h)
+        components/Archer/Archer.hpp
+        components/Player/Player.cpp
+        components/Player/player.hpp
+        components/Player/player.hpp
+        )
 
 find_package(OpenAL REQUIRED)
 find_package(OpenGL REQUIRED)
