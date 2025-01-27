@@ -3,46 +3,109 @@
  * @author Devendra Tambat
  */
 
-#include "Archer.hpp"
+#include "Archer.h"
+#include <QTimer>
+#include <iostream>
 
-Archer::Archer(int width, int height,  const char *title, AudioEngine &audio)
+Archer::Archer(int width, int height, const char *title, AudioEngine &audio)
 {
-
-    this->window = std::make_unique<Window>(width, height, title);
-    this->window->makeContextCurrent();
-    this->gui = std::make_unique<GUI>(window->getWindow());
-    this->renderer = std::make_unique<Renderer>();
-    this->audioEngineToCall = audio;
-    this->renderer->setupTriangle();
-    this->renderer->addTriangle(0.0f, 0.0f);
+    _ArcherWindow = new Window(title);
+    _AudioEngine = audio;
+    _title = title;
+    _title.append("_Bow");
+    _AudioEngine.loadSound(_title, "../resources/audioFiles/pianoCKey.wav");
+    this->DisplayArcherWindow();
 }
 
-void Archer::update()
+void Archer::SetArcherWindowPosition(int x, int y)
 {
-    this->window->makeContextCurrent();
-    this->window->pollEvents();
-    this->gui->newFrame();
-    this->gui->setupUI();
+    const int duration_ms = 1000;
+    const int steps = 120;
+    const int delay_ms = duration_ms / steps;
 
-    int display_w, display_h;
-    this->window->getFramebufferSize(display_w, display_h);
-    glViewport(0, 0, display_w, display_h);
-    this->window->clear(0.45f, 0.55f, 0.60f, 1.00f);
-    this->renderer->render();
-    this->gui->render();
-    this->window->swapBuffers();
+    int start_x = _ArcherWindow->x();
+    int start_y = _ArcherWindow->y();
+    int dx = x - start_x;
+    int dy = y - start_y;
+
+    QTimer *timer = new QTimer(_ArcherWindow);
+    int step = 0;
+
+    QEventLoop::connect(timer, &QTimer::timeout, [=]() mutable
+                        {
+        if (step >= steps) {
+            timer->stop();
+            timer->deleteLater();
+            _ArcherWindow->move(x, y);  // Ensure final position is exact
+            return;
+        }
+        
+        float progress = static_cast<float>(step) / steps;
+        
+        float arch_height = -100 * (progress * progress - progress); // Max height of 25 pixels
+        
+        int current_x = start_x + (dx * progress);
+        int current_y = start_y + (dy * progress) - arch_height;
+        
+        _ArcherWindow->move(current_x, current_y);
+        step++; });
+
+    timer->start(delay_ms);
 }
 
-bool Archer::shouldClose() const
+void Archer::DisplayArcherWindow()
 {
-    return this->window->shouldClose();
+    _ArcherWindow->show();
 }
 
-void Archer::makeContextCurrent()
+void Archer::HideArcherWindow()
 {
-    this->window->makeContextCurrent();
+    _ArcherWindow->hide();
 }
 
-void Archer::shootArrow() {
-    audioEngineToCall.playSound("c_piano", false);
+bool Archer::TakeDamage()
+{
+    if (_health <= 0)
+    {
+        return false;
+    }
+    else
+    {
+        _health--;
+        return true;
+    }
+}
+
+int Archer::GetHealth()
+{
+    return _health;
+}
+
+void Archer::PlayAudio()
+{
+    _AudioEngine.playSound(_title, false);
+}
+
+void Archer::checkHealth()
+{
+    if (this->GetHealth() <= 0)
+    {
+        _ArcherWindow->hide();
+    }
+}
+
+void Archer::Update()
+{
+    this->checkHealth();
+    // update check health etc.
+}
+
+
+
+Archer::archerLoactionData Archer::ArcherLocation() const
+{
+    archerLoactionData archerLoc;
+    archerLoc.x = _ArcherWindow->x();
+    archerLoc.y = _ArcherWindow->y();
+    return archerLoc;
 }

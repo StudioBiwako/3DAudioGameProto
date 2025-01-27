@@ -1,76 +1,20 @@
-#include "Window.hpp"
+/**
+ * @file Window.cpp
+ * @author Devendra Tambat
+ */
 
-Window::Window(int width, int height, const char *title)
-{
-    initGLFW();
-    setupHints();
-    createWindow(width, height, title);
-    makeContextCurrent();
-}
+#include "Window.h"
 
-Window::~Window()
+Window::Window(const QString &title)
 {
-    glfwDestroyWindow(window);
-    glfwTerminate();
-}
+setWindowTitle(title);
+resize(300, 300);
 
-void Window::initGLFW()
-{
-    if (!glfwInit())
-    {
-        throw std::runtime_error("Failed to initialize GLFW");
-    }
-}
+QWidget *centralWidget = new QWidget(this);
+QVBoxLayout *layout = new QVBoxLayout(centralWidget);
 
-void Window::setupHints()
-{
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-}
+QPushButton *button = new QPushButton("Button in " + title, centralWidget);
+layout->addWidget(button);
 
-void Window::createWindow(int width, int height, const char *title)
-{
-    window = glfwCreateWindow(width, height, title, NULL, NULL);
-    if (!window)
-    {
-        glfwTerminate();
-        throw std::runtime_error("Failed to create GLFW window");
-    }
-}
-
-bool Window::shouldClose()
-{
-    return glfwWindowShouldClose(window);
-}
-
-void Window::swapBuffers()
-{
-    glfwSwapBuffers(window);
-}
-
-void Window::pollEvents()
-{
-    glfwPollEvents();
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-    {
-        glfwSetWindowShouldClose(window, GLFW_TRUE);
-    }
-}
-
-void Window::makeContextCurrent()
-{
-    glfwMakeContextCurrent(window);
-}
-
-void Window::getFramebufferSize(int &width, int &height)
-{
-    glfwGetFramebufferSize(window, &width, &height);
-}
-
-void Window::clear(float r, float g, float b, float a)
-{
-    glClearColor(r, g, b, a);
-    glClear(GL_COLOR_BUFFER_BIT);
+setCentralWidget(centralWidget);
 }

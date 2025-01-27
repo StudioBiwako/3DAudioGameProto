@@ -9,6 +9,7 @@ imgui/
 # CMake generated files
 CMakeCache.txt
 CMakeFiles/
+cmake-build-debug/
 cmake_install.cmake
 compile_commands.json
 Makefile

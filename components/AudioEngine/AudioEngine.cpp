@@ -3,7 +3,7 @@
  * reference: https://www.openal.org/documentation/OpenAL_Programmers_Guide.pdf
  * for buffer properties
  */
-#include "AudioEngine.hpp"
+#include "AudioEngine.h"
 #include <iostream>
 #include <filesystem>
 #define DR_WAV_IMPLEMENTATION
@@ -73,6 +73,8 @@ void AudioEngine::cleanup()
 std::unordered_map<std::string, SoundSource>& AudioEngine::getSounds() {
     return sounds;
 }
+
+
 
 bool AudioEngine::loadSound(const std::string &name, const std::string &filePath)
 {

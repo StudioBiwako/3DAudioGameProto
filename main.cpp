@@ -1,106 +1,51 @@
-// main.cpp
-#define GL_SILENCE_DEPRECATION
-
-#include "components/Window/Window.hpp"
-#include "components/GUI/GUI.hpp"
-#include "components/Renderer/Renderer.hpp"
-#include "components/AudioEngine/AudioEngine.hpp"
-#include "components/Archer/Archer.hpp"
-#include "components/Player/Player.hpp"
+#include <QApplication>
+#include <QGuiApplication>
+#include <QScreen>
 #include <iostream>
-#include <vector>
+#include <QTimer>
+#include "Components/Archer/Archer.h"
+#include "Components/Player/Player.h"
 
-int main()
+int main(int argc, char *argv[])
 {
-    bool gameIsRunning = true;
-    try
-    {
-        AudioEngine audio;
-        if (!audio.loadSound("forest", "../Audio/forest.wav"))
-        {
-            std::cerr << "Failed to load forest sound" << std::endl;
-            return 0;
-        }
-        if (!audio.loadSound("c_piano", "../Audio/c_piano.wav"))
-        {
-            std::cerr << "Failed to load c_piano sound" << std::endl;
-            return 0;
-        }
-        if (!audio.loadSound("d_piano", "../Audio/c_piano.wav"))
-        {
-            std::cerr << "Failed to load d_piano sound" << std::endl;
-            return 0;
-        }
+    QApplication a(argc, argv);
+    Player _player;
 
-        if (!audio.loadSound("e_piano", "../Audio/c_piano.wav"))
-        {
-            std::cerr << "Failed to load e_piano sound" << std::endl;
-            return 0;
-        }
+    AudioEngine _audioEngine;
+    // since Background Audio is not mono we can load it in the main.cpp
+    _audioEngine.loadSound("forest", "../resources/audioFiles/forestBackgroundMusic.wav");
+    _audioEngine.playSound("forest");
 
-        if (!audio.loadSound("f_piano", "../Audio/c_piano.wav"))
-        {
-            std::cerr << "Failed to load f_piano sound" << std::endl;
-            return 0;
-        }
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect screenGeometry = screen->geometry();
+    int screenWidth = screenGeometry.width();
+    int screenHeight = screenGeometry.height();
 
-        audio.playSound("forest", true);
-        audio.setListenerPosition(0.0f, 0.0f, 0.0f);
-        audio.printSoundNames();
+    int centerY = screenHeight / 2;
+    int spacing = screenWidth / 4;
+    int startX = (screenWidth / 2) - spacing;
 
-        audio.setSoundPosition("c_piano", 0.0f, 0.0f, 5.0f);
-        audio.setSoundVolume("c_piano", 1.0f);
-        audio.playSound("c_piano", true);
+    Archer archerOne(300, 300, "Archer_One", _audioEngine);
+    archerOne.SetArcherWindowPosition(startX-150, centerY-150);
+    Archer archerTwo(300, 300, "Archer_Two", _audioEngine);
+    archerTwo.SetArcherWindowPosition(startX + spacing-150, centerY-350);
+    Archer archerThree(300, 300, "Archer_Three", _audioEngine);
+    archerThree.SetArcherWindowPosition(startX + (spacing * 2)-150, centerY-150);
 
-        audio.setSoundPosition("d_piano", 3.0f, 0.0f, 0.0f);
-        audio.setSoundVolume("d_piano", 1.0f);
-        audio.setSoundPitch("d_piano", 0.5f);
-        audio.playSound("d_piano", true);
+    std::vector<Archer> _archers;
+    _archers.push_back(archerOne);
+    _archers.push_back(archerTwo);
+    _archers.push_back(archerThree);
+    QTimer updateTimer;
 
-        audio.setSoundPosition("e_piano", -3.0f, 0.0f, 0.0f);
-        audio.setSoundVolume("e_piano", 1.0f);
-        audio.setSoundPitch("e_piano", 1.5f);
-        audio.playSound("e_piano", true);
+    std::cout << "main gameplay loop running";
+    QObject::connect(&updateTimer, &QTimer::timeout, [&_archers]()
+                     {
+        for(auto& archer : _archers) {
+            archer.Update();
+        } });
 
-        audio.setSoundPosition("f_piano", 0.0f, 0.0f, -5.0f); // Behind (negative Z)
-        audio.setSoundVolume("f_piano", 1.0f);
-        audio.setSoundPitch("f_piano", 2.0f); // Different pitch to distinguish it
-        audio.playSound("f_piano", true);
+    updateTimer.start(16);
 
-        std::vector<std::unique_ptr<Archer>> archers;
-
-        // Create archers
-        archers.push_back(std::make_unique<Archer>(200, 200, "Archer 1", audio));
-        archers.push_back(std::make_unique<Archer>(200, 200, "Archer 2",audio));
-        archers.push_back(std::make_unique<Archer>(200, 200, "Archer 3",audio));
-
-        Player newPlayer = Player();
-        // Main game loop (must run on main thread for GLFW/OpenGL)
-        while (gameIsRunning)
-        {
-            // Update all archers
-            for (auto &archer : archers)
-            {
-                if (archer->isAlive())
-                {
-                    if (archer->shouldClose())
-                    {
-                        //currently closing all archers
-                        gameIsRunning = false;
-                        break;
-                    }
-                    archer->update();
-                    newPlayer.update();
-                }
-            }
-        }
-        return 0;
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << "Error: " << e.what() << std::endl;
-        return -1;
-    }
-
-    return 0;
+    return QApplication::exec();
 }
